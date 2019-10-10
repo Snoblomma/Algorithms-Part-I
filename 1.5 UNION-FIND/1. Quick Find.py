@@ -47,7 +47,6 @@ class QuickFind:
             self.id[i] = i
 
     def connected(self, p, q):
-        print(self.id[p] == self.id[q])
         return self.id[p] == self.id[q]
 
     def union(self, p, q):
