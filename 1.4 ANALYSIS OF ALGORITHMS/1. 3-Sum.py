@@ -1,4 +1,3 @@
-import time
 import unittest
 
 class TestThreeSum(unittest.TestCase):
@@ -9,7 +8,6 @@ class TestThreeSum(unittest.TestCase):
         self.assertEqual(threeSum.count(a), 4)   
 
 class ThreeSum:
-
     def count(self, a):
         N = len(a)
         count = 0
@@ -24,8 +22,5 @@ class ThreeSum:
 
 if __name__ == '__main__':
     unittest.main()
-    a = list(map(int,input().split(' '))) 
-    start = time.time()
-    ThreeSum.count(a)
-    end = time.time()
-    # print(end-start)
+    # a = list(map(int,input().split(' '))) 
+    # ThreeSum.count(a)
