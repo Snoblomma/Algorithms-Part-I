@@ -1,4 +1,12 @@
 import time
+import unittest
+
+class TestThreeSum(unittest.TestCase):
+    def test(self):
+        threeSum = ThreeSum()
+        f = open('/home/kate/Documents/Algorithms Part I/Algorithms-Part-I/1.4 ANALYSIS OF ALGORITHMS/8ints.txt')
+        a = list(map(int,f.readline().split(' '))) 
+        self.assertEqual(threeSum.count(a), 4)   
 
 class ThreeSum:
 
@@ -15,8 +23,9 @@ class ThreeSum:
 
 
 if __name__ == '__main__':
+    unittest.main()
     a = list(map(int,input().split(' '))) 
     start = time.time()
     ThreeSum.count(a)
     end = time.time()
-    print(end-start)
+    # print(end-start)
