@@ -1,5 +1,4 @@
 # Sort strings from file in alphabetical order
-import random
 import unittest
 
 class TestStringSorter(unittest.TestCase):
