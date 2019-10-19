@@ -4,7 +4,7 @@ class TestStackOfStrings(unittest.TestCase):
     def test_stack(self):
         s = 'to be or not to - be - - that - - - is'
         d = s.split(' ')
-        stackOfStrings = ResizingArrayStackOfStrings(len(d))
+        stackOfStrings = ResizingArrayStackOfStrings()
         for i in d:
             if i == '-':
                 stackOfStrings.pop()
@@ -16,7 +16,7 @@ class ResizingArrayStackOfStrings(object):
     N = 0
     s = []
 
-    def __init__(self, capacity):
+    def __init__(self):
         self.s = ['']
     
     def isEmpty(self):
