@@ -10,11 +10,11 @@ class TestQueueResizingArray(unittest.TestCase):
                 queueResizingArray.dequeue()
             else:
                 queueResizingArray.enqueue(i)
-        self.assertEqual(queueResizingArray.getString(), 'that is')
+        self.assertEqual(queueResizingArray.getString(), 'to that is')
 
 class QueueResizingArray(object):
     head = 0
-    tail = 0
+    tail = 1
     s = []
 
     def __init__(self, capacity):
@@ -38,13 +38,13 @@ class QueueResizingArray(object):
     def getString(self):
         res = []
         for i in self.s:
-            if i != None:
+            if i != None and i != '':
                 res.append(i)
         return ' '.join(res)
 
     def resize(self, capacity):
         copy = [None]*capacity
-        for i in range(self.head):
+        for i in range(self.tail):
             copy[i] = self.s[i]
         self.s = copy
 
